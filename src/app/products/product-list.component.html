@@ -1,0 +1,50 @@
+<div class="card">
+    <div class="card-header">
+        {{pageTitle}}
+    </div>
+    <div>
+        <input type="text" [(ngModel)]= 'addCode' >
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-2">
+                Filter by:
+            </div>
+            <div class="col-mhjkd-4">
+                    <input type="text">
+                </div>
+        </div>
+        <div class="row">
+                <div class="col-md-6">
+                    Filter by:
+                </div>
+            </div>
+    </div>
+    <div class="table" *ngIf="products && products.length">
+        <table>
+            <div>NO of Elements : {{products.length}} and Filter : {{_addCode}}</div>
+            <thead>
+                <th>
+                    <button class="bn btn-primary" (click)='toggleStatus()'>
+                        Show status
+                    </button>
+                </th>
+                <th>Product</th>
+                <th>Code</th>
+                <th>Available</th>
+                <th>Price</th>
+                <th>Rating</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of products">
+                    <td *ngIf='showStatus'>{{product.status}}</td>
+                    <td>{{product.name}}</td>
+                    <td>{{product.code}}</td>
+                    <td>{{product.status}}</td>
+                    <td>{{product.price}}</td>
+                    <td>{{product.rating}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
