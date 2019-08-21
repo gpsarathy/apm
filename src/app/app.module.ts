@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms'
 
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './products/product-list.component';
+import { PConvertToStars } from './pipes/PConvertToStars';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductListComponent
+    ProductListComponent,
+    PConvertToStars
   ],
   imports: [
     FormsModule,

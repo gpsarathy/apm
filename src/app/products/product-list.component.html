@@ -34,6 +34,7 @@
                 <th>Available</th>
                 <th>Price</th>
                 <th>Rating</th>
+                <th>Stars</th>
             </thead>
             <tbody>
                 <tr *ngFor="let product of products">
@@ -43,6 +44,7 @@
                     <td>{{product.status}}</td>
                     <td>{{product.price}}</td>
                     <td>{{product.rating}}</td>
+                    <td>{{ product.rating | ConvertToStars }}</td>
                 </tr>
             </tbody>
         </table>

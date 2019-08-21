@@ -1,4 +1,6 @@
 import { Component, NgModule, Input } from '@angular/core';
+import { PConvertToStars } from '../pipes/PConvertToStars';
+    
 
 @Component({
     selector:"pm-products",
