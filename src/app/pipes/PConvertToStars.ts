@@ -8,16 +8,17 @@ import { Pipe,PipeTransform } from '@angular/core';
 
 export class PConvertToStars implements PipeTransform
 {
-    val:string='';
+    
     transform(rating: string, ...args: any[]) {
 
         var rt =parseInt(rating);
+        var val='';
         while( rt-->0)
         {
-        this.val+='*';
+        val+='*';
         }
-        this.val= this.val+'end';
-        return this.val;
+        
+        return val;
     }
     
 }
