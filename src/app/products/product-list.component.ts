@@ -1,6 +1,6 @@
 import { Component, NgModule, Input } from '@angular/core';
 import { PConvertToStars } from '../pipes/PConvertToStars';
-    
+import { StarRatingComponent } from '../star-rating/star-rating.component';
 
 @Component({
     selector:"pm-products",
