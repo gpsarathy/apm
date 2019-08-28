@@ -44,7 +44,7 @@
                     <td>{{product.status}}</td>
                     <td>{{product.price}}</td>
                     <td>{{product.rating}}</td>
-                    <td><app-star-rating [rating]='product.rating'></app-star-rating></td>
+                    <td><app-star-rating [rating]='product.rating' (ratingGiven)='ratingClick($event)'></app-star-rating></td>
                 </tr>
             </tbody>
         </table>

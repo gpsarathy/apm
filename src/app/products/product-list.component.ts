@@ -48,4 +48,8 @@ toggleStatus()
 {
  this.showStatus= !this.showStatus;
 }
+ratingClick(rating:number)
+{
+    this.pageTitle="YOu gave "+rating;
+}
 }
