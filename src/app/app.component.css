@@ -1,0 +1,14 @@
+.top {
+    float: none;
+    left:0; right:0;
+    height: 92px;
+}
+.left {
+    float: left;
+    left:0; top:92px; bottom: 0;
+    width: 178px;   
+}
+.main {
+    float: none;
+     top:92px; right:0; bottom:0;
+}

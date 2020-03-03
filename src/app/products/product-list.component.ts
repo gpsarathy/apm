@@ -1,18 +1,21 @@
-import { Component, NgModule, Input } from '@angular/core';
+import { Component, NgModule, Input, OnInit } from '@angular/core';
 import { PConvertToStars } from '../pipes/PConvertToStars';
 import { StarRatingComponent } from '../star-rating/star-rating.component';
+import { IProducts } from './IProduct';
 
 @Component({
     selector:"pm-products",
     templateUrl:"./product-list.component.html"
 })
 
-export class ProductListComponent
+export class ProductListComponent implements OnInit
 {
-pageTitle:string="Product List ! :-)";
+    ngOnInit(): void {
+        this.products=this.allProducts;
+    }
+pageTitle:string="Product List Page";
 showStatus:boolean = false;
-
-products : any[] =[
+allProducts : IProducts[]=[
     {
         name:"Watch",
         code:"W05",
@@ -40,8 +43,17 @@ products : any[] =[
         status:"N",
         price:"Rs 2",
         rating:"8"
+    },
+    {
+        name:"Pencil",
+        code:"P32",
+        status:"Y",
+        price:"Rs 2",
+        rating:"6"
     }
 ];
+products:IProducts[];
+
 private _addCode: string;
 
 get addCode():string
@@ -49,9 +61,10 @@ get addCode():string
     return this._addCode;
 }
 
-set addCode(value)
+set addCode(value:string)
 {
     this.testFunc();
+    this.products= value.toLowerCase?this.allProducts.filter((product:IProducts)=>product.name.indexOf(value)!=-1):this.allProducts;
     this._addCode=value;
 }
 testFunc()
@@ -64,6 +77,6 @@ toggleStatus()
 }
 ratingClick(rating:number)
 {
-    this.pageTitle="YOu gave "+rating;
+    this.pageTitle="You gave "+rating;
 }
 }
