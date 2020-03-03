@@ -14,6 +14,20 @@ showStatus:boolean = false;
 
 products : any[] =[
     {
+        name:"Watch",
+        code:"W05",
+        status:"Y",
+        price:"Rs 200",
+        rating:"9"
+    },
+    {
+        name:"Mobile",
+        code:"M65",
+        status:"Y",
+        price:"Rs 2000",
+        rating:"7"
+    },
+    {
         name:"Note",
         code:"A12",
         status:"Y",

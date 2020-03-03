@@ -14,15 +14,10 @@
                     <input type="text">
                 </div>
         </div>
-        <div class="row">
-                <div class="col-md-6">
-                    Filter by:
-                </div>
-            </div>
     </div>
     <div class="table" *ngIf="products && products.length">
         <table>
-            <div>NO of Elements : {{products.length}} and Filter : {{_addCode}}</div>
+            <div>No of Elements : {{products.length}} and Filter : {{_addCode}}</div>
             <thead>
                 <th>
                     <button class="bn btn-primary" (click)='toggleStatus()'>
@@ -38,7 +33,10 @@
             </thead>
             <tbody>
                 <tr *ngFor="let product of products">
-                    <td *ngIf='showStatus'>{{product.status}}</td>
+                    <td *ngIf="showStatus; else emptyBox">{{product.status}}</td>
+                    <ng-template #emptyBox>
+                        <td></td>
+                      </ng-template>
                     <td>{{product.name}}</td>
                     <td>{{product.code}}</td>
                     <td>{{product.status}}</td>

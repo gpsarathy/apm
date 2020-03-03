@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'A Product Mgnt';
+  title = 'A Product Management';
   showDefPage:boolean =false;
   
 }
