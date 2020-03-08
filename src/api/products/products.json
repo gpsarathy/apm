@@ -1,0 +1,37 @@
+[
+    {
+        "name":"Watch",
+        "code":"W05",
+        "status":"Y",
+        "price":"Rs 200",
+        "rating":"9"
+    },
+    {
+        "name":"Mobile",
+        "code":"M65",
+        "status":"Y",
+        "price":"Rs 2000",
+        "rating":"7"
+    },
+    {
+        "name":"Note",
+        "code":"A12",
+        "status":"Y",
+        "price":"Rs 56",
+        "rating":"7"
+    },
+    {
+        "name":"Pen",
+        "code":"A32",
+        "status":"N",
+        "price":"Rs 2",
+        "rating":"8"
+    },
+    {
+        "name":"Pencil",
+        "code":"P32",
+        "status":"Y",
+        "price":"Rs 2",
+        "rating":"6"
+    }
+]
